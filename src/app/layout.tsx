@@ -1,4 +1,14 @@
 import './globals.css'
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: 'Marko & Katarina | Wedding Landing Page',
+  robots: 'noindex',
+  viewport: 'width=device-width, initial-scale=1',
+  icons: {
+    icon: '/favicon.ico',
+  },
+};
 
 export default function RootLayout({
   children,
@@ -7,10 +17,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
       <body>{children}</body>
     </html>
